@@ -1,22 +1,3 @@
-"""Window half-width ablation over five seeds.
-
-Same 4-config (baseline/1x/3x/10x) x 5-seed window-width ablation as the
-original, but trained with the closed-form-k, two-residual PINN of
-pinn_common.py instead of the free-k, three-residual one.
-
-The per-epoch "return residual" curve in the right panel of
-window_ablation_loss.png is now a genuine diagnostic: k is reconstructed in
-closed form from (theta_s, theta_r), so the return condition
-k(th_r-th_s) + A_0(sin th_r - sin th_s) = 0 is satisfied identically by
-construction, at every epoch, regardless of what the network has learned.
-It is evaluated here purely to show that (it should sit at the
-floating-point floor throughout, not track training progress), not because
-it enters the loss -- only the tunnelling and rescattering residuals do.
-
-Writes window_ablation.npz, window_ablation_loss.png, window_ablation_summary.png,
-window_ablation_error.png into output/windowing/ (same filenames as the
-original).
-"""
 import numpy as np
 import torch
 import matplotlib.pyplot as plt

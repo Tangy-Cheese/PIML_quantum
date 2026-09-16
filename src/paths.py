@@ -1,14 +1,3 @@
-"""Canonical filesystem locations for the project.
-
-Every path is resolved from this file's own location, not from the current
-working directory, so scripts may be run from anywhere:
-
-    python scripts/figures/make_error_maps_2d.py
-    cd scripts/figures && python make_error_maps_2d.py
-
-Both forms write to the same place.
-"""
-
 import os
 from pathlib import Path
 

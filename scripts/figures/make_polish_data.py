@@ -1,23 +1,3 @@
-"""Hybrid PINN + Newton polish test, on a log grid approaching the caustic.
-
-Two cases, run through identical machinery so they can be compared directly:
-
-    mono     -- the ordinary orbit pair A coalescence of the monochromatic
-                field, Re p_c = 2.1973 (Sec. 6.2's new headline case)
-    phistar  -- the engineered bichromatic coalescence at phi* = 0.2489 pi,
-                where Im p_c -> 0 by construction (Appendix D)
-
-Both train the k-eliminated windowed PINN over 5 seeds, then polish each
-network output with four damped Newton steps, and report the trajectory
-error before and after polishing as a function of distance from the caustic,
-together with whether the polished solution stayed on the branch it started
-from.
-
-    python make_polish_data.py mono
-    python make_polish_data.py phistar
-
-Writes polish_<case>.npz into output/polish/.
-"""
 import numpy as np
 import torch
 

@@ -1,17 +1,3 @@
-"""Redraw the eight-family 2D error-map figure in the dissertation's standard
-figure style, from the stored results of make_error_maps_2d.py.
-
-Reads output/families/error_maps_2d.npz and re-renders only -- no network is
-retrained here, so the plotted numbers are byte-identical to those already
-reported in the text.
-
-Differences from the original rendering: the same rcParams as
-replot_all_families_1d.py (serif, cm mathtext, matched font sizes and tick
-style), a canvas sized to the width the figure is actually printed at
-(the full \\textwidth of a two-column-spanning figure*, 17.6 cm) so that point
-sizes on the page match Fig. 10 exactly rather than being shrunk by
-\\includegraphics, and 300 dpi.
-"""
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt

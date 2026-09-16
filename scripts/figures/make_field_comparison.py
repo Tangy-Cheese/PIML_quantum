@@ -1,24 +1,3 @@
-"""Three validation cases side by side, and the summary table for the write-up.
-
-Rows are field configurations rather than intensities:
-
-    mono      monochromatic, orbit pair A, I = 1.0e14 W/cm^2 (the middle row
-              of the existing three-intensity pair A figure)
-    bichrom   untuned bichromatic omega-2omega, phi = 0.6 pi, A_2/A_1 = 0.3
-    phistar   bichromatic at the engineered phase phi* = 0.2489 pi
-
-Columns: Re theta, Im theta, physics residual ||F||, matching the layout of
-the existing three-intensity figure.
-
-Every case is run at 5 seeds. The monochromatic case is recomputed here at
-seed 0 as a check that it reproduces the published figure's numbers exactly
-before the extra seeds are added; this script never writes pair_a_intensities.png and
-never changes the published monochromatic results.
-
-    python make_field_comparison.py mono      # run + cache monochromatic, 5 seeds
-    python make_field_comparison.py phistar   # run + cache phi* pair grid, 5 seeds
-    python make_field_comparison.py fig       # figure + summary table
-"""
 import numpy as np
 import torch
 import matplotlib as mpl

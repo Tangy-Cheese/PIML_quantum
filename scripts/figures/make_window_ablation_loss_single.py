@@ -1,21 +1,3 @@
-"""Single-column loss-curve figure for the window half-width ablation.
-
-Same 4-config (baseline/1x/3x/10x) x 5-seed ablation, same seeds and same
-training setup as make_window_ablation.py, so the numbers are identical to
-the ones already quoted in Table 3 -- only the plotting differs:
-
-  * left panel only (the per-config physics-loss curves); the right-hand
-    per-residual diagnostic panel is not produced here,
-  * sized for a single column rather than the full two-column width,
-  * seeds are combined with the *mean* rather than the median.
-
-Also writes window_ablation_hist.npz (the full per-epoch, per-seed loss
-histories), which make_window_ablation.py discards -- with that on disk the
-figure can be restyled later without retraining.
-
-Writes window_ablation_loss_single.png and window_ablation_hist.npz into
-output/windowing/.
-"""
 import numpy as np
 import torch
 import matplotlib.pyplot as plt

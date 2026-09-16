@@ -1,14 +1,3 @@
-"""Redraw the all-families accuracy figure in the dissertation's standard
-figure style, from the stored results of make_all_families_1d.py.
-
-Reads output/families/all_families_1d.npz and re-renders only -- no network
-is retrained here, so the plotted numbers are byte-identical to those already
-reported in the text.
-
-Differences from the original rendering: dissertation rcParams (serif, cm
-mathtext, matched font sizes and tick style), no in-figure title (the caption
-carries it), legend entries reduced to the orbit number alone, and 300 dpi.
-"""
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt

@@ -1,14 +1,3 @@
-"""Bichromatic phase-sweep figure: orbit pair A at three ordinary relative
-phases, matching the layout of the monochromatic three-intensity figure.
-
-Rows are relative phase (0.5 pi, 0.6 pi, 0.9 pi), columns are Re theta,
-Im theta and the network's own physics residual -- the same three columns as
-the intensity figure, so the two read as a pair: the intensity figure asks
-whether the method holds as the coalescence relocates within one field, this
-one asks whether it holds across the second field's own parameter space.
-
-Also prints the summary table body for the write-up.
-"""
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt

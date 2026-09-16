@@ -1,13 +1,3 @@
-"""Pseudo-arclength continuation for the rescattered ATI saddle-point system.
-
-Phase units theta = omega * t, matching rescattered.py. The intermediate
-momentum k is eliminated analytically via the return condition, leaving two
-complex equations in two complex unknowns (four real). The momentum p_par is
-promoted to an unknown and an arclength normalisation row is appended, so the
-augmented 5x5 Jacobian stays nonsingular at a simple fold and the branch is
-traced straight through the coalescence.
-"""
-
 import numpy as np
 
 OMEGA = 0.057

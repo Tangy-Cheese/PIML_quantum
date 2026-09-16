@@ -1,14 +1,3 @@
-"""Appendix D figures: behaviour on approach to the caustic, phi* against the
-ordinary monochromatic case, with 5-seed spread.
-
-    polish_approach.png   physics residual and branch separation against
-                              distance from p_c, phi* vs ordinary, median over
-                              5 seeds with min-max bands
-    polish_comparison.png     PINN error before and after 4 damped Newton
-                              steps, against distance from p_c, both cases
-
-Reads output/polish/polish_{mono,phistar}.npz (make_polish_data.py).
-"""
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt

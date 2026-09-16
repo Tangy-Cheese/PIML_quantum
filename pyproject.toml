@@ -16,9 +16,6 @@ dependencies = [
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
-# The physics modules are flat modules under src/, imported as `continuation`,
-# `bichromatic`, `pinn_common`, `paths`. Scripts also insert src/ on sys.path
-# directly, so an install is convenient but not required.
 [tool.setuptools]
 package-dir = { "" = "src" }
 py-modules = ["continuation", "bichromatic", "pinn_common", "paths"]

@@ -1,15 +1,3 @@
-"""All eight orbit families in one dimension.
-
-Same 8-family 1D sweep, same p_grid, window sizing and seeds as the
-original, but trained with the closed-form-k, two-residual PINN of
-pinn_common.py instead of the free-k, three-residual one -- so the code
-matches what report.tex claims (Eq. loss-k-eliminated-full) rather than
-the "unreduced" system it was actually generated with.
-
-Writes all_families_1d.npz, all_families_error_1d.png, all_families_summary_1d.png
-into output/families/ (same filenames as the original, so report.tex's
-\\includegraphics lines do not need to change).
-"""
 import numpy as np
 import torch
 import matplotlib.pyplot as plt

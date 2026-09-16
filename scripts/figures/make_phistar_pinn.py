@@ -1,15 +1,3 @@
-"""Network behaviour at the engineered coalescence phi*.
-
-Same phi* configuration, ground truth and evaluation as the original, but
-trained with the closed-form-k, two-residual PINN of pinn_common.py instead
-of the free-k, three-residual one. This is the network behind the
-dissertation's headline phi* claim (Sec. 5.2), so it needs to match the
-architecture actually described (Eq. loss-k-eliminated-full) like everything
-else regenerated in this folder.
-
-Writes phistar_pinn.npz, phistar_error.png, phistar_separation.png,
-phistar_loss.png into output/phistar/ (same filenames as the original).
-"""
 import numpy as np
 import torch
 import matplotlib.pyplot as plt

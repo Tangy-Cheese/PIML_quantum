@@ -1,12 +1,3 @@
-"""Two-dimensional error maps for all eight orbit families.
-
-Same 8-family 2D (p_par, p_perp) grid, window sizing and seeds as the
-original, but trained with the closed-form-k, two-residual PINN of
-pinn_common.py instead of the free-k, three-residual one.
-
-Writes error_maps_2d.npz, error_maps_2d.png into output/families/
-(same filenames as the original).
-"""
 import numpy as np
 import torch
 import matplotlib.pyplot as plt

@@ -1,14 +1,3 @@
-"""Replacement for report.tex's old Figs. 7/8/9 (pairA_theta_real/imag/residual):
-one 3x3 figure, rows = intensity, columns = Re(theta), Im(theta), physics
-residual ||F||, for orbit pair A (short/long branches).
-
-Adapted from the earlier pairA_resI.py (the pre-existing, correct reference for
-this exact figure -- true k-elimination, closed-form k, caustic-based p_c
-via continuation.caustic_point, momentum range set relative to the caustic)
-rather than the earlier free-k PINN, and laid out as a 3x3 grid
-instead of two separate Re/Im figures. Intensities match pairA_resI.py:
-0.5, 1.0, 1.5 x 10^14 W/cm^2.
-"""
 import numpy as np
 import torch
 import matplotlib as mpl

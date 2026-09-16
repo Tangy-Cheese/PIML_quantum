@@ -1,17 +1,3 @@
-"""The k-eliminated PINN and its trainer -- shared by every published result.
-
-k is not a network output. It is reconstructed in closed form from
-(theta_s, theta_r) via the return condition (report.tex Eq. k-elimination),
-so the return condition is satisfied identically and only two residuals --
-tunnelling and rescattering -- enter the loss. This is the architecture of
-Fig. 6 and Eq. loss-k-eliminated-full, and the loss report.tex states was
-"used to produce every result in Secs. 5.2-6".
-
-An earlier generation of scripts instead emitted k as a free sixth network
-output and trained on three residuals (the unreduced system,
-Eq. loss-unreduced-full). Those scripts have been removed; everything under
-scripts/figures/ uses the module below, so the code matches the claim.
-"""
 import numpy as np
 import torch
 import torch.nn as nn

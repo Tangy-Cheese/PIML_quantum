@@ -1,21 +1,3 @@
-"""Orbit families on the two field shapes used in this work -- idealised.
-
-This is a schematic, not a data plot: it sketches where the release/return
-phases of the shortest- and longest-delay orbit pairs sit relative to one
-another and to the field, using hand-placed, deliberately well-spread
-phase values rather than the literal converged saddle solutions. The real
-solutions crowd together too tightly (several families share a release
-phase to within the marker size) to read cleanly as points on the curve,
-so this trades numerical exactness for a picture a reader can actually
-parse. Exact values are given in-text and in the later validation figures
-(Sec. validation-eight-orbit-families).
-
-Points sit directly on the field curve, as in a genuine orbit-family plot,
-just spaced out by hand instead of by the solver.
-
-Writes output/families/orbit_families.png, and copies it to the report
-figure directory when that exists.
-"""
 import shutil
 import sys
 from pathlib import Path

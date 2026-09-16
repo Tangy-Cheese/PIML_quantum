@@ -1,24 +1,3 @@
-"""The phi* construction: the pair-A caustic locus as the relative phase varies.
-
-Continues the pair-A caustic in the bichromatic relative phase phi, warm-started
-from the converged phi* solution of output/ground_truth/critical_phi.npz, so the
-caustic tracked is by construction the same one at every phase -- unlike
-scripts/diagnostics/phi_scan.py, which re-detects caustics independently at each
-phi and therefore loses branch identity where several lie close together.
-
-Panel (a) is the locus in the complex momentum plane; panel (b) is |Im p_c|
-against phi on a log axis, which is where the crossing of the real axis at phi*
-is legible. The three relative phases used for the bichromatic validation of
-Sec. 6.2 are computed independently by make_bichrom_phase_data.py and overlaid
-as a consistency check on the continuation.
-
-No scaling law is drawn on either panel: whether kappa_max follows
-|Im p_c|^(-1/2) is an open question at the time of writing (the measured
-exponent over the bichromatic phases is nearer -1.14), and this figure is the
-construction, not the law.
-
-Writes phistar_construction.png to the figure directory.
-"""
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt

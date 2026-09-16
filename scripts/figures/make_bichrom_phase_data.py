@@ -1,36 +1,3 @@
-"""Untuned bichromatic omega-2omega field, swept over relative phase.
-
-    A(theta) = A_1 cos(theta) + A_2 cos(2 theta + phi),   A_2/A_1 = 0.3
-
-using the same A_1 and harmonic ratio as the phi* construction
-(bichromatic.py: A_1 = 0.0534/0.057, RATIO = 0.3), at three ordinary phases
-
-    phi = 0.5 pi, 0.6 pi, 0.9 pi
-
-all comfortably away from phi* = 0.2489 pi. The phases were chosen after
-checking the caustic at each: |Im p_c| runs 5.7e-3 -> 2.1e-2 and kappa runs
-2.9e3 -> 6.1e2 across the three, so all three are ordinary, off-axis
-coalescences. Phases below ~0.4 pi were rejected because the caustic drifts
-back toward the real axis there (at 0.2 pi, |Im p_c| = 1.1e-3 and
-kappa = 1.8e4), which would reintroduce a near-degenerate case; that regime
-belongs to Appendix D, not here.
-
-Orbit pair A is identified independently at each phase, by adiabatic
-continuation of the monochromatic pair A caustic in the harmonic ratio from
-0 to 0.3 at that fixed phi -- the orbit splitting differs from phase to
-phase, so the descendant pair cannot be assumed to be the same caustic.
-
-    python make_bichrom_phase_data.py gt    0.6pi
-    python make_bichrom_phase_data.py train 0.6pi
-    python make_bichrom_phase_data.py all   0.6pi
-    python make_bichrom_phase_data.py all   all      # every phase in sequence
-
-Momentum range follows the same relative convention as the three-intensity
-rows of the monochromatic pair A figure: [0.17, 1.16] x Re p_c. Training
-matches that figure too (2500 epochs, pad-3.0 window box) rather than the
-1500 epochs quoted in the report's hyperparameter table, so the two figures
-are directly comparable.
-"""
 import numpy as np
 import torch
 
