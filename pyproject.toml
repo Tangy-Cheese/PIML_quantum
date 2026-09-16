@@ -1,5 +1,5 @@
 [project]
-name = "ati-atto"
+name = "Rescattered-ATI_PINNs"
 version = "1.0.0"
 description = "Windowed physics-informed neural networks for the rescattered-ATI saddle-point equations"
 readme = "README.md"

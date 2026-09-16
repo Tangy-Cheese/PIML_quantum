@@ -79,8 +79,6 @@ def main():
 
             R = d[f"{b}_res"]
             ax_rs.semilogy(p, np.median(R, axis=0), ls, color="#3f3f46", lw=0.95)
-            ax_rs.fill_between(p, R.min(axis=0), R.max(axis=0),
-                               color="#3f3f46", alpha=0.16, lw=0)
 
         for ax in (ax_re, ax_im, ax_rs):
             ax.axvline(p_c, color=C_PC, ls=":", lw=0.8, zorder=0)
@@ -99,10 +97,6 @@ def main():
         ax_re.text(0.035, 0.93, LABELS[tag], transform=ax_re.transAxes,
                    va="top", ha="left", fontsize=7.0,
                    bbox=dict(fc="white", ec="0.75", lw=0.4, pad=1.6))
-        ax_rs.text(0.035, 0.06, rf"$\kappa={d['kappa']:.0f}$",
-                   transform=ax_rs.transAxes, va="bottom", ha="left",
-                   fontsize=6.4, color=C_PC,
-                   bbox=dict(fc="white", ec="none", pad=1.0))
         ax_rs.text(p_c, ax_rs.get_ylim()[0], r"$p_c$", ha="center",
                    va="bottom", fontsize=6.4, color=C_PC)
         if row == 0:

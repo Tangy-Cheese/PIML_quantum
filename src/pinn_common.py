@@ -10,9 +10,7 @@ Fig. 6 and Eq. loss-k-eliminated-full, and the loss report.tex states was
 An earlier generation of scripts instead emitted k as a free sixth network
 output and trained on three residuals (the unreduced system,
 Eq. loss-unreduced-full). Those scripts have been removed; everything under
-scripts/figures/ uses the module below, so the code matches the claim. The
-only surviving copies of the free-k trainer are vendored under
-future_work/pmd/legacy/ as dependencies of unpublished work.
+scripts/figures/ uses the module below, so the code matches the claim.
 """
 import numpy as np
 import torch

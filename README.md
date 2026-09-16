@@ -63,7 +63,6 @@ scripts/
 
 output/<category>/       all generated .npz data and .png/.pdf figures
 docs/                    figure map, scope and caveats
-future_work/             kept but unpublished work — see future_work/README.md
 ```
 
 ## Install
@@ -154,10 +153,9 @@ still written to `output/`.
 The trajectory results are complete and validated. The amplitude/PMD stage is
 **not** claimed: `uniform_anchored` in `continuation.py` was calibrated at
 $\phi^\ast$ and does not reduce correctly to the ordinary stationary-phase
-amplitude far from the caustic, so no momentum distribution is presented. That
-work, and the honest list of everything else still open, is in
-[`docs/scope_and_caveats.md`](docs/scope_and_caveats.md) and
-[`future_work/README.md`](future_work/README.md).
+amplitude far from the caustic, so no momentum distribution is presented. The
+honest list of everything else still open is in
+[`docs/scope_and_caveats.md`](docs/scope_and_caveats.md).
 
 ## Licence
 
