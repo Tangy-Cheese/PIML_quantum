@@ -9,7 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 from paths import out, figure_dir
-import bichromatic as B
+from classical_solvers import bichromatic as B
 from pinn_common import PINN
 
 torch.set_default_dtype(torch.float64)

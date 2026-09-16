@@ -8,7 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 from paths import out, figure_dir
-import continuation as C
+from classical_solvers import monochromatic as C
 
 OUT = out("diagnostics")
 

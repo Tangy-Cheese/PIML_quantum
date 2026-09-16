@@ -32,7 +32,8 @@ class PINN(nn.Module):
 
 def residuals(th_s, th_r, p_par, p_perp, A_0, I_P):
     """Closed-form k (return condition solved analytically); two residuals,
-    tunnelling and rescattering, matching continuation.py's residual_c."""
+    tunnelling and rescattering, matching classical_solvers/monochromatic.py's
+    residual_c."""
     k = -A_0 * (torch.sin(th_r) - torch.sin(th_s)) / (th_r - th_s)
     A_s = A_0 * torch.cos(th_s)
     A_r = A_0 * torch.cos(th_r)

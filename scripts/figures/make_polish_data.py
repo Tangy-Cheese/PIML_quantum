@@ -6,8 +6,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 from paths import out, figure_dir
-import continuation as C
-import bichromatic as B
+from classical_solvers import monochromatic as C
+from classical_solvers import bichromatic as B
 from pinn_common import PINN, train, train_bichrom
 
 torch.set_default_dtype(torch.float64)
@@ -28,7 +28,7 @@ V0_MONO = [4.96186, 0.96739, 9.26187, -0.01340, 2.197280, 0.017697]
 
 
 class MonoField:
-    """Adapter: monochromatic field, continuation.py."""
+    """Adapter: monochromatic field, classical_solvers/monochromatic.py."""
     name = "mono"
     label = "monochromatic, ordinary pair A"
 
@@ -50,7 +50,7 @@ class MonoField:
 
 
 class PhiStarField:
-    """Adapter: bichromatic field at phi*, bichromatic.py."""
+    """Adapter: bichromatic field at phi*, classical_solvers/bichromatic.py."""
     name = "phistar"
     label = r"bichromatic at $\phi^\ast$"
 

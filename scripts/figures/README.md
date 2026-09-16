@@ -21,7 +21,7 @@ Untuned bichromatic omega-2omega field, swept over relative phase.
     A(theta) = A_1 cos(theta) + A_2 cos(2 theta + phi),   A_2/A_1 = 0.3
 
 using the same A_1 and harmonic ratio as the phi* construction
-(bichromatic.py: A_1 = 0.0534/0.057, RATIO = 0.3), at three ordinary phases
+(classical_solvers/bichromatic.py: A_1 = 0.0534/0.057, RATIO = 0.3), at three ordinary phases
 
     phi = 0.5 pi, 0.6 pi, 0.9 pi
 
@@ -124,7 +124,7 @@ residual ||F||, for orbit pair A (short/long branches).
 
 Adapted from the earlier pairA_resI.py (the pre-existing, correct reference for
 this exact figure -- true k-elimination, closed-form k, caustic-based p_c
-via continuation.caustic_point, momentum range set relative to the caustic)
+via monochromatic.caustic_point, momentum range set relative to the caustic)
 rather than the earlier free-k PINN, and laid out as a 3x3 grid
 instead of two separate Re/Im figures. Intensities match pairA_resI.py:
 0.5, 1.0, 1.5 x 10^14 W/cm^2.
